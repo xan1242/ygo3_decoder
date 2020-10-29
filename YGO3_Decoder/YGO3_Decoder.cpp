@@ -697,7 +697,7 @@ int EncodeYGO3File(char* InFilename, char* OutFilename)
 
 	if (fin == NULL)
 	{
-		printf("ERROR: Can't open file for reading: %s\n");
+		printf("ERROR: Can't open file for reading: %s\n", InFilename);
 		perror("ERROR");
 		return -1;
 	}
@@ -715,7 +715,7 @@ int EncodeYGO3File(char* InFilename, char* OutFilename)
 	FILE* fout = fopen(OutFilename, "wb");
 	if (fout == NULL)
 	{
-		printf("ERROR: Can't open file for writing: %s\n");
+		printf("ERROR: Can't open file for writing: %s\n", OutFilename);
 		perror("ERROR");
 		return -1;
 	}
@@ -737,7 +737,7 @@ int DecodeYGO3File(char* InFilename, char* OutFilename)
 
 	if (fin == NULL)
 	{
-		printf("ERROR: Can't open file for reading: %s\n");
+		printf("ERROR: Can't open file for reading: %s\n", InFilename);
 		perror("ERROR");
 		return -1;
 	}
@@ -757,7 +757,7 @@ int DecodeYGO3File(char* InFilename, char* OutFilename)
 	FILE* fout = fopen(OutFilename, "wb");
 	if (fout == NULL)
 	{
-		printf("ERROR: Can't open file for writing: %s\n");
+		printf("ERROR: Can't open file for writing: %s\n", OutFilename);
 		perror("ERROR");
 		return -1;
 	}
